@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #d225da;
+}
+
+.container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('img/pixelgalaxy.gif'); 
+    background-size: cover; 
+    animation: animatedBackground 10s infinite alternate;
+}
+
+@keyframes animatedBackground {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+h1{
+    font-family: 'Pixelify Sans', cursive;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #25DAD2;
+}
+
+p{
+    text-align: center;
+    color: #25DAD2;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pixelify Sans', cursive;
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bold;
+    color: #25DAD2;
+}
+
+input{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid rgb(137, 137, 137);
+    margin-top: 10px;
+    outline: none;
+}
+
+.login-btn{
+    border: none;
+    background-color: #dad225;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-family: 'Pixelify Sans', cursive;
+}
